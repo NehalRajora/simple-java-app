@@ -39,4 +39,4 @@ jobs:
         -Dsonar.projectKey="${{ secrets.SONAR_PROJECT_KEY }}" \
         -Dsonar.organization="${{ secrets.SONAR_ORGANIZATION }}" \
         -Dsonar.login="${{ secrets.SONAR_TOKEN }}" \
-        -Dsonar.host.url="https://sonarcloud.io"
+        # 
