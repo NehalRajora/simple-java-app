@@ -35,8 +35,8 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         GIT_HUB_TOKEN: ${{ secrets._GIT_HUB_TOKEN }}
-      run: mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.11.0.3922:sonar \
+      run: mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=simple-java-apps \
         -Dsonar.projectKey="${{ secrets.SONAR_PROJECT_KEY }}" \
         -Dsonar.organization="${{ secrets.SONAR_ORGANIZATION }}" \
         -Dsonar.login="${{ secrets.SONAR_TOKEN }}" \
-        # 
+        -Dsonar.host.url="https://sonarcloud.io"
